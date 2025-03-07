@@ -1,72 +1,234 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Suriya - Python Developer</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <img src="Images/suriya2.jpg" alt="Profile Photo" class="profile-photo">
-            <h1>My Portfolio</h1>
-            <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+    <!-- Header and Navigation -->
+    <header class="container">
+        <div class="logo">
+            <div class="logo-icon">S</div>
+            <div>Suriya</div>
         </div>
+        
+        <nav>
+            <ul>
+                <li><a href="#hero" class="active">Hello</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            
+            <div class="social-icons">
+                <div class="social-icon">G</div>
+            </div>
+            
+            <a href="#contact" class="action-button">LET'S TALK</a>
+        </nav>
     </header>
+    
+    <!-- Hero Section -->
+    <section id="hero" class="hero container">
+        <div class="hero-content">
+            <p class="hero-greeting">HELLO, I'M A</p>
+            <h1 class="hero-title">Python Developer <span class="hero-role">/</span> <span class="hero-role">Security Researcher .</span></h1>
+            <p class="hero-description">
+                Hi! I'm Suriya, a passionate Python Developer and Security Researcher with a keen interest in web development and cybersecurity. I'm a fresher eager to learn and grow in the tech industry. Welcome to my portfolio world.
+            </p>
+            <a href="#portfolio" class="primary-button">VIEW PORTFOLIO</a>
+        </div>
+        
+        <div class="hero-image">
+            <img src="Images/suriya2.jpg" alt="Suriya Profile Image">
+        </div>
+        
+        <div class="hero-bg"></div>
+        
+        <!-- Decorative shapes -->
+        <div class="shape shape-1">▲</div>
+        <div class="shape shape-2">◯</div>
+        <div class="shape shape-3">◇</div>
+    </section>
+    
+    <!-- About Section -->
+<section id="about" class="about">
+    <div class="container about-container">
+        <div class="about-image">
+            <img src="Images/suriya5.jpg" alt="About Me Image">
+            
+            <div class="about-stats about-stats-left">
+                <div class="stat-item">
+                    <div class="stat-number">3+</div>
+                    <div class="stat-label">Years of Experience</div>
+                </div>
+            </div>
+            
+            <div class="about-stats about-stats-right">
+                <div class="stat-item">
+                    <div class="stat-number">25+</div>
+                    <div class="stat-label">Projects Completed</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">10+</div>
+                    <div class="stat-label">Happy Clients</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="about-content">
+            <p class="section-subtitle">Let me introduce myself</p>
+            <h2 class="section-title">About me</h2>
+            <p class="about-text">
+                A story of hard work and perseverance.
+            </p>
+            <p class="about-text">
+                Hi, I'm Suriya, a passionate aspiring developer eager to make my mark in the world of technology. I'm excited to apply the knowledge and skills I've gained through various courses and certifications to solve real-world challenges and create innovative solutions.
+            </p>
+            
+            <h1 class="section-title">Skills & Expertise</h1>
+            <p class="about-text">
+                I specialize in programming languages such as C, Python, and Linux, and I’ve gained a solid foundation in MySQL, Networking, Cryptography, and Cybercrime. I also completed a Professional Ethical Hacking course from Alison to enhance my understanding of cybersecurity.
+            </p>
+            
+            <p class="about-text">
+                My key strengths lie in problem-solving and communication, which help me approach challenges with a logical mindset and collaborate effectively with others to find the best solutions.
+            </p>
+            
+            <!-- "What I Offer" with unique bullet points -->
+            <div class="about-contact">
+                <h1 class="section-title">What I Offer</h1>
+            
+                <ul class="unique-bullets">
+                    <li><span class="bullet-icon">🔥</span> C & Python Programming: Building efficient and functional solutions.</li>
+                    <li><span class="bullet-icon">🔐</span> Networking & Cybersecurity: Knowledgeable in securing systems and understanding network protocols.</li>
+                    <li><span class="bullet-icon">📊</span> MySQL: Proficient in managing databases and handling data efficiently.</li>
+                    <li><span class="bullet-icon">🌐</span> Linux: Comfortable working in Linux environments for development and server-side applications.</li>
+            <p class="about-text">      
+                    I’m eager to dive into projects, contribute my skills, and learn from industry professionals as I grow in my career.
+            </p>
+                </ul>
+            </div>
+            
+            <div class="about-actions">
+                <a href="#contact" class="primary-button">HIRE ME</a>
+                <a href="#" class="secondary-button">DOWNLOAD CV</a>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <section id="about">
+    
+    <!-- Services Section -->
+    <section id="services" class="services">
         <div class="container">
-            <h2>About Me</h2>
-            <p>Hello! I'm [Suriya], I am learning <mark>Cyber Tech</mark> from SNA.</p>
+            <div class="section-header">
+                <p class="section-subtitle">What I will do for you</p>
+                <h2 class="section-title">Services</h2>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🐍</div>
+                    <h3 class="service-title">Python Development</h3>
+                    <p class="service-description">
+                        Create robust Python applications, scripts, and utilities. Clean architecture, efficient code. Problem-solving, optimization, testing.
+                    </p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🌐</div>
+                    <h3 class="service-title">Web Development</h3>
+                    <p class="service-description">
+                        Create modern web applications using Django, Flask, or FastAPI. User authentication, API design, database integration, Responsive web design.
+                    </p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">📊</div>
+                    <h3 class="service-title">Data Analysis</h3>
+                    <p class="service-description">
+                        Extract insights from data using pandas, NumPy, and matplotlib. Data cleaning, visualization, statistical analysis, and reporting.
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
-
-    <section id="projects">
+    
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
         <div class="container">
-            <h2>Projects</h2>
-            <div class="project">
-                <h3>Project 1</h3>
-                <p>Description of Project 1. Technologies used: HTML, CSS, JavaScript.</p>
+            <div class="section-header">
+                <p class="section-subtitle">My Recent Work</p>
+                <h2 class="section-title">Portfolio</h2>
             </div>
-            <div class="project">
-                <h3>Project 2</h3>
-                <p>Description of Project 2. Technologies used: HTML, CSS, React.</p>
+            
+            <div class="portfolio-filter">
+                <button class="filter-button active">All</button>
+                <button class="filter-button">Web Apps</button>
+                <button class="filter-button">Data Analysis</button>
+                <button class="filter-button">Automation</button>
+            </div>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="images/portfolio-1.jpg" alt="Portfolio Item 1" class="portfolio-image">
+                    <div class="portfolio-hover">
+                        <h3 class="portfolio-title">E-commerce Platform</h3>
+                        <p class="portfolio-category">Django, PostgreSQL, AWS</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <img src="images/portfolio-2.jpg" alt="Portfolio Item 2" class="portfolio-image">
+                    <div class="portfolio-hover">
+                        <h3 class="portfolio-title">Data Visualization Dashboard</h3>
+                        <p class="portfolio-category">Flask, Pandas, Matplotlib</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <img src="images/portfolio-3.jpg" alt="Portfolio Item 3" class="portfolio-image">
+                    <div class="portfolio-hover">
+                        <h3 class="portfolio-title">Automated Reporting System</h3>
+                        <p class="portfolio-category">Python, Airflow, SQL</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-
-    <section id="contact">
+    
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
         <div class="container">
-            <h2>Contact Me</h2>
-            <form>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-
-                <button type="submit">Send</button>
+            <div class="section-header">
+                <p class="section-subtitle">Get in Touch</p>
+                <h2 class="section-title">Contact</h2>
+            </div>
+            
+            <form action="#" method="post" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" placeholder="Your message" rows="5" required></textarea>
+                </div>
+                
+                <button type="submit" class="primary-button">Send</button>
             </form>
         </div>
     </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 [Suriya]. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
