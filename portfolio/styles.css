@@ -91,6 +91,28 @@ nav ul li a.active:after {
     background-color: #10B981;
 }
 
+  /*  some thing is here */
+  .social-icons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.social-icon {
+    width: 40px;  /* Size of the circle */
+    height: 40px;  /* Size of the circle */
+    border-radius: 50%;  /* Makes it round */
+    background-color: #4285F4;  /* Google blue color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;  /* Size of the letter */
+    color: white;  /* Text color */
+    font-weight: bold;
+    text-align: center;
+}
+/* till here*/
+
 .social-icons {
     display: flex;
     gap: 15px;
@@ -337,6 +359,48 @@ nav ul li a.active:after {
 
 .secondary-button:hover {
     background-color: #4A5568;
+}
+/* Style for the certificates section */
+.certificates {
+    background-color: #1A202C;
+    padding: 50px 0;
+}
+
+.certificates .certificate-item {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+}
+
+.certificates .certificate-icon {
+    font-size: 2rem;
+    color: #333;
+}
+
+.certificates .certificate-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.certificates .certificate-description {
+    font-size: 1rem;
+    color: #A0AEC0;
+}
+
+.certificates .certificate-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    background: linear-gradient(135deg, #10B981, #4d71b8);
+    color: #1A202C;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.certificates .certificate-link:hover {
+    background-color: #0056b3;
 }
 
 /* Contact Section */
