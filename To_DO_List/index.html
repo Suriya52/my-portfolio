@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Master | Modern To-Do List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>✨ Task Master</h1>
+            <p>A beautiful way to organize your tasks</p>
+        </header>
+
+        <div class="app-container">
+            <div class="alert alert-success" id="success-alert"></div>
+            <div class="alert alert-danger" id="error-alert"></div>
+
+            <div class="task-form">
+                <input type="text" class="task-input" id="task-input" placeholder="Add a new task...">
+                <select class="priority-select" id="priority-select">
+                    <option value="low">Low Priority</option>
+                    <option value="medium" selected>Medium Priority</option>
+                    <option value="high">High Priority</option>
+                </select>
+                <button class="btn btn-primary" id="add-task-btn">Add Task</button>
+            </div>
+
+            <div class="filters">
+                <div>
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="active">Active</button>
+                    <button class="filter-btn" data-filter="completed">Completed</button>
+                </div>
+                <div>
+                    <button class="filter-btn" data-filter="high">High Priority</button>
+                    <button class="filter-btn" data-filter="medium">Medium Priority</button>
+                    <button class="filter-btn" data-filter="low">Low Priority</button>
+                </div>
+            </div>
+
+            <ul class="task-list" id="task-list">
+                <!-- Tasks will be inserted here -->
+            </ul>
+
+            <div class="empty-state" id="empty-state">
+                <i>📝</i>
+                <h3>No tasks yet</h3>
+                <p>Add a new task to get started</p>
+            </div>
+
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-value" id="total-tasks">0</div>
+                    <div class="stat-label">Total Tasks</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="completed-tasks">0</div>
+                    <div class="stat-label">Completed</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="active-tasks">0</div>
+                    <div class="stat-label">Active</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Task Modal -->
+    <div class="modal" id="edit-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Edit Task</h3>
+                <button class="close-modal" id="close-modal">&times;</button>
+            </div>
+            <form class="modal-form" id="edit-form">
+                <input type="hidden" id="edit-task-id">
+                <div class="form-group">
+                    <label for="edit-task-title" class="form-label">Task Title</label>
+                    <input type="text" id="edit-task-title" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="edit-task-priority" class="form-label">Priority</label>
+                    <select id="edit-task-priority" class="form-select">
+                        <option value="low">Low Priority</option>
+                        <option value="medium">Medium Priority</option>
+                        <option value="high">High Priority</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="edit-task-completed" class="form-label">Status</label>
+                    <select id="edit-task-completed" class="form-select">
+                        <option value="false">Active</option>
+                        <option value="true">Completed</option>
+                    </select>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" id="cancel-edit">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
