@@ -5,6 +5,143 @@
     font-family: 'Inter', 'Helvetica', sans-serif;
 }
 
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f9f7; /* Light background */
+    color: #333;
+    line-height: 1.6;
+    padding: 0;
+}
+
+/* Portfolio Grid */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 30px;
+    padding: 40px;
+    justify-items: center;
+}
+
+/* Portfolio Item */
+.portfolio-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect on Portfolio Item */
+.portfolio-item:hover {
+    transform: translateY(-10px); /* Slightly raise on hover */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Portfolio Card Styling */
+.portfolio-card {
+    padding: 20px;
+    background-color: #42f89d;
+    position: relative;
+}
+
+/* Title Styling */
+.portfolio-title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #2d7b4e; /* Green Color */
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+/* Hover Effect on Title */
+.portfolio-item:hover .portfolio-title {
+    color: #006400; /* Dark Green */
+}
+
+/* Category Styling */
+.portfolio-category {
+    font-size: 1rem;
+    color: #097c76;
+    margin-bottom: 15px;
+}
+
+/* Description Styling */
+.portfolio-description {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+
+/* Hover Effect for Details */
+.portfolio-hover {
+    background-color: #2d7b4e; /* Green Background */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+/* Show Hover Content on Item Hover */
+.portfolio-item:hover .portfolio-hover {
+    transform: translateY(0);
+}
+
+/* View More Button */
+.btn-view {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #fff;
+    color: #2d7b4e;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover Effect on Button */
+.btn-view:hover {
+    background-color: #006400; /* Dark Green */
+    color: #fff;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-title {
+        font-size: 1.4rem;
+    }
+
+    .btn-view {
+        padding: 10px 20px;
+    }
+}
+
+
 body {
     background-color: #171923;
     color: #ffffff;
