@@ -120,26 +120,139 @@ body {
     color: #fff;
 }
 
-/* Responsive Layout */
-@media (max-width: 768px) {
-    .portfolio-grid {
-        grid-template-columns: 1fr 1fr;
+/* ========== Experience & Skills Section Styling ========== */
+.experience-grid,
+.skills-grid {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.experience-card,
+.skills-column {
+  flex: 1 1 300px;
+  background: #10f1cc;
+  border-left: 5px solid #3a86ff;
+  padding: 1.5rem 1.5rem;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 20px rgba(58, 134, 255, 0.15);
+}
+
+.experience-card:hover,
+.skills-column:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+}
+
+.experience-title,
+.skills-category {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #003566;
+}
+
+.skills-list,
+.experience-description {
+  list-style: none;
+  padding-left: 0;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.skills-list li,
+.experience-description li {
+  margin-bottom: 0.8rem;
+  position: relative;
+  padding-left: 1.8em;
+  line-height: 1.5;
+}
+
+.skills-list li::before,
+.experience-description li::before {
+  content: "🛠️";
+  position: absolute;
+  left: 0;
+  font-size: 1em;
+  color: #3a86ff;
+}
+
+/* Emojis for categories */
+.skills-category::before {
+  content: "📘 ";
+}
+
+.experience-title::before {
+  content: "🧑‍💻 ";
+}
+
+/* Section Titles */
+.section-title {
+  color: #14213d;
+}
+.section-subtitle {
+  color: #3a86ff;
+  font-weight: 600;
+}
+
+
+/* Portfolio Card Styling */
+.portfolio-item {
+    background: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: translateY(0);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover Animation */
+.portfolio-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 16px 32px rgba(58, 134, 255, 0.2);
+}
+
+/* Fade-in on load */
+.portfolio-item {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards;
+    animation-delay: 0.2s;
+}
+
+/* Keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
-@media (max-width: 480px) {
-    .portfolio-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .portfolio-title {
-        font-size: 1.4rem;
-    }
-
-    .btn-view {
-        padding: 10px 20px;
-    }
+.btn-view {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 10px 24px;
+    background-color: #3a86ff;
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
+
+.btn-view:hover {
+    background-color: #265dbe;
+    transform: scale(1.05);
+}
+
+
 
 
 body {
@@ -418,6 +531,30 @@ nav ul li a.active:after {
     max-width: 400px; /* Limit the maximum width */
 }
 
+/* Default size of cards */
+.portfolio-item {
+  transition: all 0.5s ease-in-out;
+}
+
+.portfolio-card {
+  transition: transform 0.5s ease, width 0.5s ease;
+  width: 100%; /* Default card width */
+}
+
+.expanded {
+  transform: scale(1.2); /* Scaling effect for expanded cards */
+  width: 120%; /* Optionally adjust the width */
+}
+
+.stay-tuned-img {
+  width: 100%;
+  max-width: 300px;
+  margin-top: 15px;
+  border-radius: 10px;
+}
+
+
+
 .about-stats {
     position: absolute;
     display: flex;
@@ -538,6 +675,46 @@ nav ul li a.active:after {
 
 .certificates .certificate-link:hover {
     background-color: #0056b3;
+}
+
+.certificate-buttons {
+  margin-top: 12px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.btn-view {
+  background: linear-gradient(to right, #007bff, #0056d2);
+  color: #fff;
+}
+
+.btn-view:hover {
+  background: linear-gradient(to right, #0056d2, #003eaa);
+  transform: translateY(-2px);
+}
+
+.btn-download {
+  background: linear-gradient(to right, #28a745, #1e7e34);
+  color: #fff;
+}
+
+.btn-download:hover {
+  background: linear-gradient(to right, #1e7e34, #145c27);
+  transform: translateY(-2px);
 }
 
 /* Contact Section */
@@ -732,6 +909,32 @@ nav ul li a.active:after {
     overflow: hidden;
     position: relative;
 }
+
+/* Initial style for the image container (hidden by default) */
+.portfolio-2-image {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  display: none; /* Initially hidden */
+}
+
+/* Style when the image is shown */
+.portfolio-2-image.show {
+  opacity: 1;
+  display: block; /* Ensure the image is visible when the class is added */
+}
+
+.stay-tuned-image {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  display: none;
+}
+
+/* When stay tuned image is visible */
+.stay-tuned-image.show {
+  opacity: 1;
+  display: block;
+}
+
 
 .portfolio-image {
     width: 100%;
