@@ -459,6 +459,30 @@ nav ul li a.active:after {
     opacity: 0.2;
 }
 
+.cv-buttons {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.secondary-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #f5f5f5;
+  color: #333;
+  text-decoration: none;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.secondary-button:hover {
+  background-color: #e0e0e0;
+}
+
+
 .shape {
     position: absolute;
     opacity: 0.1;
