@@ -1,20 +1,28 @@
 import socket
+import threading
 
-s = socket.socket()
-print("Socket Created")
+def receive_messages(conn):
+    while True:
+        msg = conn.recv(1024).decode()
+        if not msg:
+            break
+        print("Client:", msg)
 
-s.bind(('localhost',8888))  # s - server   Bind to localhost on port 9999
+def send_messages(conn):
+    while True:
+        msg = input("")
+        conn.send(msg.encode())
 
-s.listen(3)
-print("Wating for Connection")
+server = socket.socket()
+server.bind(('0.0.0.0', 5000))
+server.listen()
 
-while True:
-    c, addr = s.accept()                 # c - client     Accept a connection
-    
-    name = c.recv(1024).decode()
-    
-    print("Connected with", addr,name)
+print("Server waiting for connection...")
+conn, addr = server.accept()
+print("Connected with:", addr)
 
-    c.send(bytes('Welcome to ......','utf-8'))
+recv_thread = threading.Thread(target=receive_messages, args=(conn,))
+send_thread = threading.Thread(target=send_messages, args=(conn,))
 
-    c.close()
+recv_thread.start()
+send_thread.start()
