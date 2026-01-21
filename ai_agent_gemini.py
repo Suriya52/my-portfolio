@@ -12,7 +12,10 @@ import feedparser  # for reading RSS feeds
 # ---------------------------
 # Step 1: Configure API Key
 # ---------------------------
-genai.configure(api_key="AIzaSyBCj4FsbEUmDWfR7vdLf9j66D51FwspAIo")  
+import os
+
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+ 
 
 # ---------------------------
 # Step 2: Initialize Model
